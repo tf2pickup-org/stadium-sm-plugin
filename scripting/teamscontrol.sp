@@ -45,7 +45,6 @@ public void OnPluginStart()
     RegServerCmd("sm_game_player_list", Command_ListPlayers, "Lists all configured players.");
     
     g_EnableWhitelist = CreateConVar("sm_game_player_whitelist", "0", "Sets whether or not to auto-kick players not on the list.", _, true, 0.0, true, 1.0);
-    g_EnableWhitelist.AddChangeHook(OnWhitelistToggled);
 
     g_Whitelist = new ArrayList(32);
     g_Names = new StringMap();
@@ -382,15 +381,6 @@ public Action KillMOTD(Handle timer, int userid)
         ShowVGUIPanel(client, "info", _, false);
     }
     return Plugin_Continue;
-}
-
-public void OnWhitelistToggled(ConVar convar, const char[] oldValue, const char[] newValue)
-{
-    switch (newValue[0])
-    {
-        case '0': if (oldValue[0] != '0') PrintToServer("[SM] Whitelist disabled.");
-        case '1': if (oldValue[0] != '1') PrintToServer("[SM] Whitelist enabled.");
-    }
 }
 
 int TF2_GetTeam(const char[] name)
