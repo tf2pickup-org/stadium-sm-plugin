@@ -25,7 +25,6 @@ ConVar g_EnableWhitelist;
 StringMap g_Names;
 StringMap g_Teams;
 StringMap g_Classes;
-bool g_Spawned[MAXPLAYERS + 1];
 
 public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max)
 {
@@ -132,8 +131,6 @@ public void OnClientPostAdminCheck(int client)
                 RequestFrame(Frame_AssignClass, pack);
             }
         }
-        
-        g_Spawned[client] = false;
     }
 }
 
@@ -167,11 +164,6 @@ void Frame_AssignClass(DataPack pack)
     TFClassType class = view_as<TFClassType>(pack.ReadCell());
     delete pack;
     TF2_SetPlayerClass(client, class);
-}
-
-public void OnClientDisconnect(int client)
-{
-    g_Spawned[client] = false;
 }
 
 public Action Command_GameReset(int args)
