@@ -1,0 +1,17 @@
+"Updater"
+{
+	"Information"
+	{
+		"Version"
+		{
+			"Latest"	"1.0"
+		}
+	}
+	
+	"Files"
+	{
+		"Plugin"	"Path_SM/plugins/teamscontrol.smx"
+		"Plugin"    "Path_SM/translations/teamscontrol.phrases.txt"
+		"Source"	"Path_SM/scripting/teamscontrol.sp"
+	}
+}
