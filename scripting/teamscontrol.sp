@@ -62,10 +62,6 @@ public void OnPluginStart()
     }
 
     LoadTranslations("teamscontrol.phrases");
-
-    ServerCommand("sm_game_player_add 76561198179807307 -class scout -team red -name holatest");
-    ServerCommand("mp_tournament 1");
-    ServerCommand("mp_tournament_restart");
 }
 
 public void OnLibraryAdded(const char[] name)
