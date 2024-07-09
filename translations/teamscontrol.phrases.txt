@@ -1,0 +1,23 @@
+"Phrases"
+{
+    "not_authorized"
+    {
+        "en" "You are not authorized to join this server"
+        "es" "No estás autorizado a unirte a este servidor"
+        "pt" "Você não tem permitido entrar a esse servidor"
+    }
+
+    "server_reset"
+    {
+        "en" "The server is being reset"
+        "es" "El servidor se está reestableciendo"
+        "pt" "O servidor está sendo redefinido"
+    }
+
+    "removed"
+    {
+        "en" "You have been removed from this game"
+        "es" "Has sido removido de esta partida"
+        "pt" "Você foi removido desta partida"
+    }
+}
